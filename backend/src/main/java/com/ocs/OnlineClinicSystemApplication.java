@@ -9,8 +9,8 @@ public class OnlineClinicSystemApplication {
     public static void main(String[] args) {
         SpringApplication.run(OnlineClinicSystemApplication.class, args);
         System.out.println("=================================================");
-        System.out.println(" Online Clinic System (OCS) Backend Started!");
-        System.out.println(" Server running on: http://localhost:8080");
+        String port = System.getenv("PORT") != null ? System.getenv("PORT") : "8080";
+        System.out.println(" Server running on port: " + port);
         System.out.println("=================================================");
     }
 }
